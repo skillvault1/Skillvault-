@@ -11,3 +11,11 @@
 .footer-contact{margin-top:5px!important}
 .footer-contact a{color:#a8bac8}
 @media(max-width:850px){.contact-grid{grid-template-columns:1fr}}
+
+.newsletter form{grid-template-columns:1fr 1fr}
+.newsletter form select{grid-column:1/-1;width:100%;border:1px solid #324354;background:#fff;border-radius:10px;padding:13px 14px;color:var(--text);outline:none}
+.newsletter form .primary{grid-column:1/-1}
+.form-success{grid-column:1/-1;color:#9be2dc;font-weight:800;font-size:.82rem}
+.form-error{grid-column:1/-1;color:#ffb5b5;font-size:.78rem}
+.privacy-note{grid-column:1/-1;color:#8fa1b0;font-size:.67rem}
+@media(max-width:650px){.newsletter form{grid-template-columns:1fr}.newsletter form select,.newsletter form .primary{grid-column:auto}}

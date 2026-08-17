@@ -19,4 +19,10 @@ render();
 
 document.querySelector(".menu").addEventListener("click",()=>document.querySelector(".links").classList.toggle("open"));
 document.querySelectorAll(".links a").forEach(a=>a.addEventListener("click",()=>document.querySelector(".links").classList.remove("open")));
-document.querySelector("#form").addEventListener("submit",e=>{e.preventDefault();document.querySelector("#message").textContent="Thanks! Newsletter integration will be connected in the next version.";e.target.reset()});
+const subscriberForm = document.querySelector("#form");
+if (subscriberForm) {
+  subscriberForm.addEventListener("submit", () => {
+    const button = subscriberForm.querySelector("[data-fs-submit-btn]");
+    if (button) button.textContent = "Submitting...";
+  });
+}

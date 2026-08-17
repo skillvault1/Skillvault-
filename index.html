@@ -91,11 +91,35 @@
 
 <section class="newsletter" id="newsletter">
 <div class="wrap newsletter-box"><div><p class="kicker">STAY UPDATED</p><h2>Never miss a great opportunity.</h2><p>Join the SkillVault updates list. Email automation will be connected in a later version.</p></div>
-<form id="form"><input required type="email" placeholder="Your email address"><button class="btn primary">Join SkillVault</button><small id="message"></small></form></div>
+<form id="form" action="https://formspree.io/f/xeajrveg" method="POST">
+  <input type="text" name="name" placeholder="Your full name" required aria-label="Full name">
+  <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
+  <select name="interest" required aria-label="Your interest">
+    <option value="" selected disabled>What are you interested in?</option>
+    <option value="Scholarships">Scholarships</option>
+    <option value="Graduate Trainee Programmes">Graduate Trainee Programmes</option>
+    <option value="Internships">Internships</option>
+    <option value="Jobs & Career Opportunities">Jobs & Career Opportunities</option>
+    <option value="Digital Skills & Resources">Digital Skills & Resources</option>
+    <option value="All Opportunities">All Opportunities</option>
+  </select>
+  <input type="hidden" name="_subject" value="New SkillVault Newsletter Subscriber">
+  <button class="btn primary" type="submit" data-fs-submit-btn>Join SkillVault</button>
+  <div data-fs-success class="form-success" role="status"></div>
+  <div data-fs-error class="form-error" role="alert"></div>
+  <small class="privacy-note">By subscribing, you agree to receive SkillVault opportunity and resource updates.</small>
+</form></div>
 </section>
 </main>
 
 <footer><div class="wrap footer"><div><a class="brand" href="#home"><b>S</b><span>Skill<span>Vault</span></span></a><p>Skills, resources and opportunities for your growth.</p></div><div class="footlinks"><a href="#opportunities">Opportunities</a><a href="#products">Resources</a><a href="#about">About</a><a href="#contact">Contact</a></div></div><div class="wrap copyright">© 2026 SkillVault. All rights reserved.</div></footer>
+<script>
+  window.formspree = window.formspree || function () {
+    (formspree.q = formspree.q || []).push(arguments);
+  };
+  formspree('initForm', { formElement: '#form', formId: 'xeajrveg' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 <script src="script.js"></script>
 </body>
 </html>
